@@ -1,0 +1,15 @@
+<header class="grid gap-4">
+  <h1 class="text-5xl text-foreground font-heading">
+    {{> title}}
+  </h1>
+  
+  {{#if @partial-block}}
+  <div class="flex items-center gap-2">
+    {{> @partial-block}}
+  </div>
+  {{/if}}
+
+  <p class="max-w-2xl">
+    {{> description}}
+  </p>
+</header>

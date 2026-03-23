@@ -1,0 +1,27 @@
+{{#layout "base"}}
+	{{#section "title"}}Home{{/section}}
+	{{#section "content"}}
+		{{#> header}}
+			{{#*inline "title"}}
+				Welcome to {{ site }}
+			{{/inline}}
+			{{#*inline "description"}}
+				A Vite plugin that brings the simplicity of Handlebars templating to modern multi-page applications, with features like dynamic routes, layouts, and components and static site generation.
+			{{/inline}}
+		{{/header}}
+		
+		<div class="flex items-center gap-2">
+			<a class="no-underline" href="/about">
+				{{#> primary-button}}
+					<span>About us</span>
+				{{/primary-button}}
+			</a>
+
+			<a class="no-underline" href="/articles">
+				{{#> secondary-button}}
+					<span>Read articles</span>
+				{{/secondary-button}}
+			</a>
+		</div>
+	{{/section}}
+{{/layout}}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>{{yield "title" "My Hidra App"}}</title>
+	<link rel="stylesheet" href="/src/assets/main.css" />
+	<script type="module" src="/src/assets/main.ts"></script>
+</head>
+<body class="min-h-screen bg-gray-50">
+	<header class="bg-white shadow">
+		<nav class="max-w-4xl mx-auto px-4 py-4">
+			<a href="/" class="text-xl font-bold text-gray-900">{{site}}</a>
+		</nav>
+	</header>
+
+	<main class="max-w-4xl mx-auto px-4 py-8">
+		{{yield "content"}}
+	</main>
+
+	<footer class="bg-white border-t mt-auto">
+		<div class="max-w-4xl mx-auto px-4 py-4 text-center text-gray-500">
+			&copy; {{year}} {{site}}
+		</div>
+	</footer>
+</body>
+</html>

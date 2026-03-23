@@ -1,0 +1,19 @@
+{{#layout 'base'}}
+	{{#section 'title'}}{{status}} - Error{{/section}}
+	{{#section 'content'}}
+		<div class='error-container'>
+			<h1>Oops! Something went wrong</h1>
+			<p class='status-code'>{{status}}</p>
+			<p class='message'>{{message}}</p>
+
+			{{#if url}}
+				<p class='url'>URL: {{url}}</p>
+			{{/if}}
+
+			<div class='actions'>
+				<a href='/' class='btn'>Go Home</a>
+				<a href='javascript:history.back()' class='btn'>Go Back</a>
+			</div>
+		</div>
+	{{/section}}
+{{/layout}}

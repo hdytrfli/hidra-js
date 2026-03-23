@@ -1,0 +1,24 @@
+{{#layout "base"}}
+	{{#section "title"}}Articles{{/section}}
+	{{#section "content"}}
+		{{#> header}}
+			{{#*inline "title"}}
+				Articles collections
+			{{/inline}}
+			{{#*inline "description"}}
+				A collection of guides, news, and updates about Hidra — from getting started to advanced patterns.
+			{{/inline}}
+		{{/header}}
+
+		<div class="grid grid-cols-2 gap-4">
+			{{#each posts as |post|}}
+				<a href="/articles/{{post.category}}/{{post.slug}}">
+					<article class="bg-showcase p-8 rounded-2xl grid gap-2">
+						<h2 class="text-foreground font-medium">{{post.title}}</h2>
+						<p class="line-clamp-2">{{post.content}}</p>
+					</article>
+				</a>
+			{{/each}}
+		</div>
+	{{/section}}
+{{/layout}}

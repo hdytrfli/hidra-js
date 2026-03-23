@@ -1,0 +1,23 @@
+{
+	"name": "@hidrajs/example",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@fontsource-variable/geist": "^5.2.8",
+		"@fontsource/gloock": "^5.2.8",
+		"@hidrajs/loader": "workspace:*"
+	},
+	"devDependencies": {
+		"@hidrajs/vite-plugin": "workspace:*",
+		"@tailwindcss/vite": "^4.2.2",
+		"tailwindcss": "^4.2.2",
+		"typescript": "^5.9.3",
+		"vite": "^8.0.1"
+	}
+}

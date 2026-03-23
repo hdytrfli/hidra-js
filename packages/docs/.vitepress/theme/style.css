@@ -1,0 +1,11 @@
+:root {
+	--vp-c-gutter: #ffffff;
+	--vp-c-border: #ffffff;
+	--vp-c-divider: #ffffff;
+}
+
+.dark {
+	--vp-c-gutter: #1b1b1f;
+	--vp-c-border: #1b1b1f;
+	--vp-c-divider: #1b1b1f;
+}

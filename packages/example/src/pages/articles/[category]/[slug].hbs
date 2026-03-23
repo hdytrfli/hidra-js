@@ -1,0 +1,21 @@
+{{#layout "base"}}
+	{{#section "title"}}{{title}}{{/section}}
+	{{#section "content"}}
+		{{#> header}}
+			{{#*inline "title"}}
+				{{title}}
+			{{/inline}}
+			
+			<span class="uppercase text-xs font-medium px-3 py-1 text-white bg-accent rounded-md">
+				{{category}}
+			</span>
+			<span class="text-xs font-medium px-3 py-1 text-white bg-ghost rounded-md">
+				{{date}}
+			</span>
+
+			{{#*inline "description"}}
+				{{content}}
+			{{/inline}}
+		{{/header}}
+	{{/section}}
+{{/layout}}

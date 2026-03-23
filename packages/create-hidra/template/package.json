@@ -1,0 +1,20 @@
+{
+	"name": "my-hidra-app",
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@hidrajs/loader": "workspace:*"
+	},
+	"devDependencies": {
+		"@hidrajs/vite-plugin": "workspace:*",
+		"@tailwindcss/vite": "^4.2.2",
+		"tailwindcss": "^4.2.2",
+		"vite": "^8.0.1",
+		"typescript": "^5.9.3"
+	}
+}

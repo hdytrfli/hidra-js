@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+IGNORED_PATTERNS=(
+  "^\.husky/"
+  "\.gitkeep"
+  "\.gitignore"
+  "\.prettierignore$"
+  "\.jpg$"
+)
+
+build_exclude_pattern() {
+  local pattern
+  local joined
+  joined=$(printf "%s|" "${IGNORED_PATTERNS[@]}")
+  echo "${joined%|}"
+}
+
+EXCLUDE_PATTERN=$(build_exclude_pattern)
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -vE "$EXCLUDE_PATTERN" || true)
+
+if [ -n "$STAGED_FILES" ]; then
+  pnpm prettier --write --cache $STAGED_FILES
+  git add $STAGED_FILES
+fi
+
+pnpm lint
+pnpm typecheck

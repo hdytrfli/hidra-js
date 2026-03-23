@@ -1,0 +1,4 @@
+@import 'tailwindcss';
+@source '../../pages/**/*.hbs';
+@source '../../layouts/**/*.hbs';
+@source '../../components/**/*.hbs';

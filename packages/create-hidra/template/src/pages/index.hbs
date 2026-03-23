@@ -1,0 +1,14 @@
+{{#layout "base"}}
+	{{#section "title"}}Home{{/section}}
+	{{#section "content"}}
+		<div class="text-center py-12">
+			<h1 class="text-4xl font-bold text-gray-900 mb-4">
+				{{shout "welcome to hidra"}}
+			</h1>
+			<p class="text-lg text-gray-600 mb-8">
+				A Vite plugin for Handlebars-based multi-page apps with Tailwind CSS.
+			</p>
+			{{> button label="Get Started"}}
+		</div>
+	{{/section}}
+{{/layout}}

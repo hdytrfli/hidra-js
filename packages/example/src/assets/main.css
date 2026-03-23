@@ -1,0 +1,76 @@
+@import 'tailwindcss';
+@source '../../pages/**/*.hbs';
+@source '../../layouts/**/*.hbs';
+@source '../../components/**/*.hbs';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+	--light: #ffffff;
+	--accent: #883dff;
+	--background: #fdfdfd;
+	--foreground: #1d1d1f;
+	--destructive: var(--color-rose-600);
+
+	--text: oklch(from var(--foreground) calc(l + 0.4) c h);
+	--muted: oklch(from var(--foreground) calc(l + 0.6) c h);
+	--ghost: oklch(from var(--background) calc(l - 0.04) c h);
+	--showcase: oklch(from var(--background) calc(l - 0.03) c h);
+
+	--font-geist: 'Geist Variable', system-ui, sans-serif;
+	--font-gloock: 'Gloock', system-ui, serif;
+}
+
+.dark {
+	--light: #ffffff;
+	--accent: #883dff;
+	--background: #1d1d1f;
+	--foreground: #fdfdfd;
+	--destructive: var(--color-rose-700);
+
+	--text: oklch(from var(--foreground) calc(l - 0.4) c h);
+	--muted: oklch(from var(--foreground) calc(l - 0.6) c h);
+	--ghost: oklch(from var(--background) calc(l + 0.04) c h);
+	--showcase: oklch(from var(--background) calc(l + 0.03) c h);
+}
+
+@theme inline {
+	--font-sans: var(--font-geist);
+	--font-heading: var(--font-gloock);
+
+	--color-light: var(--light);
+	--color-accent: var(--accent);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-destructive: var(--destructive);
+
+	--color-text: var(--text);
+	--color-muted: var(--muted);
+	--color-ghost: var(--ghost);
+	--color-showcase: var(--showcase);
+}
+
+@utility container {
+	margin-inline: auto;
+	padding-inline: 1.5rem;
+	@apply max-w-4xl;
+}
+
+@layer base {
+	* {
+		border-color: var(--color-ghost);
+	}
+
+	body {
+		color: var(--color-text);
+		font-family: var(--font-sans);
+		background-color: var(--color-background);
+
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	p {
+		line-height: 2;
+	}
+}
